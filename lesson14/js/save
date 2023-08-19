@@ -1,0 +1,273 @@
+// 1
+// function calcSum(num1, num2){
+//     console.log(num1 + num2);
+// }
+// calcSum(12, 4);
+
+// 2
+// function calcSum(num1, num2){
+//     return num1 + num2;
+// }
+// let sum = calcSum(12, 4);
+// console.log(sum);
+// console.log(calcSum(13, 25));
+
+// 3
+// function checkAge(age){
+//     if(age > 18){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// let user_age = Number(prompt('Enternzour age'));
+// if(checkAge(user_age) == true){
+//     console.log('Allowed');
+// }else{
+//     console.log('Not allowed');
+// }
+
+// 4
+// function checksmth(smth) {
+//   if (smth == true) {
+//     return "yes";
+//   }
+//   smth = false;
+// }
+
+// function checksmth(smth) {
+//   if (smth == true) {
+//     return "yes";
+//   }
+//   return "no";
+// }
+
+// function getSum(a, b) {
+//   return a + b;
+//   // sypuniajetza funkcia, pisla return niczogo ne wypowniuetsa
+// }
+
+// 5
+// function concat(message, firstname, lastname, age, weight, height){
+//     return (message + ' ' + firstname + ' ' + lastname + ' ' + age + ' ' + weight + ' ' + height);
+// }
+
+// 6
+// function getMax(a, b){
+//     if(a > b){
+//         return a;
+//     }
+//     return b;
+// }
+// console.log(getMax(12, 0));
+// console.log(getMax(12, 20));
+// console.log(getMax(20, 20));
+
+// 7
+// function get(a, b, c) {
+//   if (c >= a && c >= b) {
+//     return c;
+//   } else if (b >= a && b >= c) {
+//     return b;
+//   }
+//   return c;
+// }
+
+// console.log(get(12, 0, 50));
+// // 50
+// console.log(get(12, 20, -7));
+// // 20
+// console.log(get(20, 20, 20));
+// // 20
+
+// 8 zukl, masivu
+// function gMax(a, b, c){
+//     let max = a;
+//     if(b > max){
+//         max = b;
+//     } else if(c > max){
+//         max = c;
+//     } else if(a > max){
+//         max = a;
+//     }
+
+//     return max;
+// }
+
+// 9
+// Напишите функцию min(a, b), которая возвращает меньшее из чисел a и b.
+
+// function min(a, b) {
+//   if (a > b) {
+//     return b;
+//   }
+//     return a;
+// }
+
+// 10
+// let users = [
+//     {
+//         firstname: 'John',
+//         lastname: 'Smith',
+//         age: 30
+//     },
+//     {
+//         firstname: 'Karen',
+//         lastname: 'Hardy',
+//         age: 27
+//     },
+//     {
+//         firstname: 'Laura',
+//         lastname: 'Ashley',
+//         age: 12
+//     },
+//     {
+//         firstname: 'Ann',
+//         lastname: 'Smith',
+//         age: 31
+//     }
+// ]
+
+// for(let i = 0; i < users.length; i++){
+//     // console.log(users[i]);
+//     for(let key in users[i]){
+//         console.log(users[i][key]);
+//     }
+// }
+
+// 11
+// Написать цикл, который выводит только названия товаров
+// let array = [
+//   {
+//     id: 1,
+//     title: "bicycle",
+//     price: 45000,
+//     discount: 10,
+//   },
+//   {
+//     id: 2,
+//     title: "roller-skates",
+//     price: 15000,
+//     discount: 5,
+//   },
+//   {
+//     id: 3,
+//     title: "Kick scooter",
+//     price: 10000,
+//     discount: 30,
+//   },
+//   {
+//     id: 4,
+//     title: "skis",
+//     price: 25000,
+//     discount: 20,
+//   },
+//   {
+//     id: 5,
+//     title: "skate",
+//     price: 10000,
+//     discount: 0,
+//   },
+// ];
+
+// for (let x = 0; x < array.length; x++) {
+//     console.log(array[x].title);
+//     console.log(array[x]["title"]);
+// }
+
+// 12
+// Напишите функцию, которая в качестве аргументов получает два числа и возвращает массив чисел со значениями от меньшего числа к большему.
+
+// function getnum(a, b){
+//     let array1 = [];
+
+//     if(a > b){
+//         for(let i = b; i <= a; i++){
+
+//             array1.push(i);
+//         }
+//     }else if(a < b){
+//         for(let i = a; i <= b; i++){
+
+//             array1.push(i);
+//         }
+//     }else{
+//       return "error";
+//     }
+
+//    return array1;
+// }
+// console.log(getnum(10, 15));
+
+// 13
+// Напишите функцию, которая в качестве аргументов получает два числа и возвращает массив чисел со значениями от большего числа к меньшему.
+
+// function getnum(a, b){
+//     let array1 = [];
+
+//     if(a > b){
+//         for(let i = b; i <= a; i++){
+
+//             array1.unshift(i);
+//         }
+//     }else if(a < b){
+//         for(let i = a; i <= b; i++){
+
+//             array1.unshift(i);
+//         }
+//     }else{
+//       return "error";
+//     }
+
+//    return array1;
+// }
+// console.log(getnum(10, 15));
+
+// ridko wykorustowywatu
+// function getnum(a, b){
+//     let array1 = [];
+
+//     if(a > b){
+//         for(let i = a; i >= b; i--){
+
+//             array1.push(i);
+//         }
+//     }else if(a < b){
+//         for(let i = b; i >= a; i--){
+
+//             array1.push(i);
+//         }
+//     }else{
+//       return "error";
+//     }
+
+//    return array1;
+// }
+// console.log(getnum(10, 15));
+
+// 14
+// В программе объявлена переменная list, представляющая массив положительных и отрицательных численных значений. Используя цикл, выведите в консоль сумму положительных чисел.
+
+// let array = [13, -7, 0, 12, 40, -10, 23, -45, 0, 12, -2];
+// let sum = 0;
+
+// for(let k = 0; k < array.length; k++){
+//     if(array[k] > 0){
+//         {sum = sum + array[k];}
+//     }
+//     console.log(sum);
+// }
+
+// 15
+// Используя цикл, выведите в консоль сумму чисел из диапазона значений от 0 до 50 кратные 5.
+
+let sum = 0;
+for (let k = 0; k < 50; k++) {
+  if (k % 5 == 0) {
+    {
+      sum = sum + k;
+    }
+  }
+}
+
+console.log(sum);
