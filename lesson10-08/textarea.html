@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea</title>
+  </head>
+  <body>
+    <div>
+      <textarea name="" id="" cols="30" rows="10" maxlength="50"></textarea>
+    </div>
+
+    <p>
+      Number of symbols:
+      <!-- <span id="counter">0</span> / 50 -->
+      <span id="counter">50</span> / 50
+    </p>
+
+    <script>
+
+        const counter = document.querySelector('#counter');
+        const text = document.querySelector('textarea');
+
+        // text.addEventListener('input', function(){
+        //     counter.textContent = text.value.length;
+        // });
+    
+          text.addEventListener('input', function(){
+            counter.textContent = 50 - text.value.length;
+        });
+    </script>
+  </body>
+</html>
